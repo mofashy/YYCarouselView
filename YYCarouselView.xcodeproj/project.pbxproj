@@ -1,0 +1,634 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F0CA22B9217DC17800B22166 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA22B8217DC17800B22166 /* AppDelegate.m */; };
+		F0CA22BC217DC17800B22166 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA22BB217DC17800B22166 /* ViewController.m */; };
+		F0CA22BF217DC17800B22166 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CA22BD217DC17800B22166 /* Main.storyboard */; };
+		F0CA22C1217DC17A00B22166 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0CA22C0217DC17A00B22166 /* Assets.xcassets */; };
+		F0CA22C4217DC17A00B22166 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CA22C2217DC17A00B22166 /* LaunchScreen.storyboard */; };
+		F0CA22C7217DC17A00B22166 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA22C6217DC17A00B22166 /* main.m */; };
+		F0CA22D1217DC17B00B22166 /* YYCarouselViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA22D0217DC17B00B22166 /* YYCarouselViewTests.m */; };
+		F0CA22DC217DC17B00B22166 /* YYCarouselViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA22DB217DC17B00B22166 /* YYCarouselViewUITests.m */; };
+		F0CA22EC217DC1B100B22166 /* YYCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA22EB217DC1B100B22166 /* YYCarouselView.m */; };
+		F0CA22EF217DC21300B22166 /* YYCarouselViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA22EE217DC21300B22166 /* YYCarouselViewCell.m */; };
+		F0CA22F2217DC24900B22166 /* YYPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA22F1217DC24900B22166 /* YYPageControl.m */; };
+		F0CA22F5217DC2AA00B22166 /* YYCarouselViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA22F4217DC2AA00B22166 /* YYCarouselViewFlowLayout.m */; };
+		F0CA22F8217DC4DC00B22166 /* YYCarouselViewTileLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA22F7217DC4DC00B22166 /* YYCarouselViewTileLayout.m */; };
+		F0CA22FB217DC4ED00B22166 /* YYCarouselViewStackLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA22FA217DC4ED00B22166 /* YYCarouselViewStackLayout.m */; };
+		F0CA22FE217DC64B00B22166 /* YYCarouselViewLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA22FD217DC64B00B22166 /* YYCarouselViewLayoutAttributes.m */; };
+		F0CA2301217DC70100B22166 /* YYWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA2300217DC70100B22166 /* YYWeakTimer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F0CA22CD217DC17B00B22166 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0CA22AC217DC17800B22166 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0CA22B3217DC17800B22166;
+			remoteInfo = YYCarouselView;
+		};
+		F0CA22D8217DC17B00B22166 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0CA22AC217DC17800B22166 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0CA22B3217DC17800B22166;
+			remoteInfo = YYCarouselView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F0CA22B4217DC17800B22166 /* YYCarouselView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYCarouselView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0CA22B7217DC17800B22166 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F0CA22B8217DC17800B22166 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F0CA22BA217DC17800B22166 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F0CA22BB217DC17800B22166 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F0CA22BE217DC17800B22166 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F0CA22C0217DC17A00B22166 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F0CA22C3217DC17A00B22166 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F0CA22C5217DC17A00B22166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0CA22C6217DC17A00B22166 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F0CA22CC217DC17B00B22166 /* YYCarouselViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYCarouselViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0CA22D0217DC17B00B22166 /* YYCarouselViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCarouselViewTests.m; sourceTree = "<group>"; };
+		F0CA22D2217DC17B00B22166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0CA22D7217DC17B00B22166 /* YYCarouselViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYCarouselViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0CA22DB217DC17B00B22166 /* YYCarouselViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCarouselViewUITests.m; sourceTree = "<group>"; };
+		F0CA22DD217DC17B00B22166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0CA22EA217DC1B100B22166 /* YYCarouselView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCarouselView.h; sourceTree = "<group>"; };
+		F0CA22EB217DC1B100B22166 /* YYCarouselView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCarouselView.m; sourceTree = "<group>"; };
+		F0CA22ED217DC21300B22166 /* YYCarouselViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCarouselViewCell.h; sourceTree = "<group>"; };
+		F0CA22EE217DC21300B22166 /* YYCarouselViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCarouselViewCell.m; sourceTree = "<group>"; };
+		F0CA22F0217DC24900B22166 /* YYPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYPageControl.h; sourceTree = "<group>"; };
+		F0CA22F1217DC24900B22166 /* YYPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYPageControl.m; sourceTree = "<group>"; };
+		F0CA22F3217DC2AA00B22166 /* YYCarouselViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCarouselViewFlowLayout.h; sourceTree = "<group>"; };
+		F0CA22F4217DC2AA00B22166 /* YYCarouselViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCarouselViewFlowLayout.m; sourceTree = "<group>"; };
+		F0CA22F6217DC4DC00B22166 /* YYCarouselViewTileLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCarouselViewTileLayout.h; sourceTree = "<group>"; };
+		F0CA22F7217DC4DC00B22166 /* YYCarouselViewTileLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCarouselViewTileLayout.m; sourceTree = "<group>"; };
+		F0CA22F9217DC4ED00B22166 /* YYCarouselViewStackLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCarouselViewStackLayout.h; sourceTree = "<group>"; };
+		F0CA22FA217DC4ED00B22166 /* YYCarouselViewStackLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCarouselViewStackLayout.m; sourceTree = "<group>"; };
+		F0CA22FC217DC64B00B22166 /* YYCarouselViewLayoutAttributes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCarouselViewLayoutAttributes.h; sourceTree = "<group>"; };
+		F0CA22FD217DC64B00B22166 /* YYCarouselViewLayoutAttributes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCarouselViewLayoutAttributes.m; sourceTree = "<group>"; };
+		F0CA22FF217DC70100B22166 /* YYWeakTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYWeakTimer.h; sourceTree = "<group>"; };
+		F0CA2300217DC70100B22166 /* YYWeakTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYWeakTimer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0CA22B1217DC17800B22166 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0CA22C9217DC17B00B22166 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0CA22D4217DC17B00B22166 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F0CA22AB217DC17800B22166 = {
+			isa = PBXGroup;
+			children = (
+				F0CA22B6217DC17800B22166 /* YYCarouselView */,
+				F0CA22CF217DC17B00B22166 /* YYCarouselViewTests */,
+				F0CA22DA217DC17B00B22166 /* YYCarouselViewUITests */,
+				F0CA22B5217DC17800B22166 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F0CA22B5217DC17800B22166 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0CA22B4217DC17800B22166 /* YYCarouselView.app */,
+				F0CA22CC217DC17B00B22166 /* YYCarouselViewTests.xctest */,
+				F0CA22D7217DC17B00B22166 /* YYCarouselViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0CA22B6217DC17800B22166 /* YYCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				F0CA22E9217DC19900B22166 /* YYCarouselView */,
+				F0CA22B7217DC17800B22166 /* AppDelegate.h */,
+				F0CA22B8217DC17800B22166 /* AppDelegate.m */,
+				F0CA22BA217DC17800B22166 /* ViewController.h */,
+				F0CA22BB217DC17800B22166 /* ViewController.m */,
+				F0CA22BD217DC17800B22166 /* Main.storyboard */,
+				F0CA22C0217DC17A00B22166 /* Assets.xcassets */,
+				F0CA22C2217DC17A00B22166 /* LaunchScreen.storyboard */,
+				F0CA22C5217DC17A00B22166 /* Info.plist */,
+				F0CA22C6217DC17A00B22166 /* main.m */,
+			);
+			path = YYCarouselView;
+			sourceTree = "<group>";
+		};
+		F0CA22CF217DC17B00B22166 /* YYCarouselViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				F0CA22D0217DC17B00B22166 /* YYCarouselViewTests.m */,
+				F0CA22D2217DC17B00B22166 /* Info.plist */,
+			);
+			path = YYCarouselViewTests;
+			sourceTree = "<group>";
+		};
+		F0CA22DA217DC17B00B22166 /* YYCarouselViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F0CA22DB217DC17B00B22166 /* YYCarouselViewUITests.m */,
+				F0CA22DD217DC17B00B22166 /* Info.plist */,
+			);
+			path = YYCarouselViewUITests;
+			sourceTree = "<group>";
+		};
+		F0CA22E9217DC19900B22166 /* YYCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				F0CA22EA217DC1B100B22166 /* YYCarouselView.h */,
+				F0CA22EB217DC1B100B22166 /* YYCarouselView.m */,
+				F0CA22ED217DC21300B22166 /* YYCarouselViewCell.h */,
+				F0CA22EE217DC21300B22166 /* YYCarouselViewCell.m */,
+				F0CA22F0217DC24900B22166 /* YYPageControl.h */,
+				F0CA22F1217DC24900B22166 /* YYPageControl.m */,
+				F0CA22FC217DC64B00B22166 /* YYCarouselViewLayoutAttributes.h */,
+				F0CA22FD217DC64B00B22166 /* YYCarouselViewLayoutAttributes.m */,
+				F0CA22F3217DC2AA00B22166 /* YYCarouselViewFlowLayout.h */,
+				F0CA22F4217DC2AA00B22166 /* YYCarouselViewFlowLayout.m */,
+				F0CA22F6217DC4DC00B22166 /* YYCarouselViewTileLayout.h */,
+				F0CA22F7217DC4DC00B22166 /* YYCarouselViewTileLayout.m */,
+				F0CA22F9217DC4ED00B22166 /* YYCarouselViewStackLayout.h */,
+				F0CA22FA217DC4ED00B22166 /* YYCarouselViewStackLayout.m */,
+				F0CA22FF217DC70100B22166 /* YYWeakTimer.h */,
+				F0CA2300217DC70100B22166 /* YYWeakTimer.m */,
+			);
+			path = YYCarouselView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0CA22B3217DC17800B22166 /* YYCarouselView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0CA22E0217DC17B00B22166 /* Build configuration list for PBXNativeTarget "YYCarouselView" */;
+			buildPhases = (
+				F0CA22B0217DC17800B22166 /* Sources */,
+				F0CA22B1217DC17800B22166 /* Frameworks */,
+				F0CA22B2217DC17800B22166 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YYCarouselView;
+			productName = YYCarouselView;
+			productReference = F0CA22B4217DC17800B22166 /* YYCarouselView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F0CA22CB217DC17B00B22166 /* YYCarouselViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0CA22E3217DC17B00B22166 /* Build configuration list for PBXNativeTarget "YYCarouselViewTests" */;
+			buildPhases = (
+				F0CA22C8217DC17B00B22166 /* Sources */,
+				F0CA22C9217DC17B00B22166 /* Frameworks */,
+				F0CA22CA217DC17B00B22166 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0CA22CE217DC17B00B22166 /* PBXTargetDependency */,
+			);
+			name = YYCarouselViewTests;
+			productName = YYCarouselViewTests;
+			productReference = F0CA22CC217DC17B00B22166 /* YYCarouselViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F0CA22D6217DC17B00B22166 /* YYCarouselViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0CA22E6217DC17B00B22166 /* Build configuration list for PBXNativeTarget "YYCarouselViewUITests" */;
+			buildPhases = (
+				F0CA22D3217DC17B00B22166 /* Sources */,
+				F0CA22D4217DC17B00B22166 /* Frameworks */,
+				F0CA22D5217DC17B00B22166 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0CA22D9217DC17B00B22166 /* PBXTargetDependency */,
+			);
+			name = YYCarouselViewUITests;
+			productName = YYCarouselViewUITests;
+			productReference = F0CA22D7217DC17B00B22166 /* YYCarouselViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F0CA22AC217DC17800B22166 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "沈永聪";
+				TargetAttributes = {
+					F0CA22B3217DC17800B22166 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					F0CA22CB217DC17B00B22166 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = F0CA22B3217DC17800B22166;
+					};
+					F0CA22D6217DC17B00B22166 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = F0CA22B3217DC17800B22166;
+					};
+				};
+			};
+			buildConfigurationList = F0CA22AF217DC17800B22166 /* Build configuration list for PBXProject "YYCarouselView" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F0CA22AB217DC17800B22166;
+			productRefGroup = F0CA22B5217DC17800B22166 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0CA22B3217DC17800B22166 /* YYCarouselView */,
+				F0CA22CB217DC17B00B22166 /* YYCarouselViewTests */,
+				F0CA22D6217DC17B00B22166 /* YYCarouselViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F0CA22B2217DC17800B22166 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0CA22C4217DC17A00B22166 /* LaunchScreen.storyboard in Resources */,
+				F0CA22C1217DC17A00B22166 /* Assets.xcassets in Resources */,
+				F0CA22BF217DC17800B22166 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0CA22CA217DC17B00B22166 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0CA22D5217DC17B00B22166 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0CA22B0217DC17800B22166 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0CA22BC217DC17800B22166 /* ViewController.m in Sources */,
+				F0CA22C7217DC17A00B22166 /* main.m in Sources */,
+				F0CA22F2217DC24900B22166 /* YYPageControl.m in Sources */,
+				F0CA22FB217DC4ED00B22166 /* YYCarouselViewStackLayout.m in Sources */,
+				F0CA22F5217DC2AA00B22166 /* YYCarouselViewFlowLayout.m in Sources */,
+				F0CA22F8217DC4DC00B22166 /* YYCarouselViewTileLayout.m in Sources */,
+				F0CA22FE217DC64B00B22166 /* YYCarouselViewLayoutAttributes.m in Sources */,
+				F0CA22EC217DC1B100B22166 /* YYCarouselView.m in Sources */,
+				F0CA22EF217DC21300B22166 /* YYCarouselViewCell.m in Sources */,
+				F0CA2301217DC70100B22166 /* YYWeakTimer.m in Sources */,
+				F0CA22B9217DC17800B22166 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0CA22C8217DC17B00B22166 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0CA22D1217DC17B00B22166 /* YYCarouselViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0CA22D3217DC17B00B22166 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0CA22DC217DC17B00B22166 /* YYCarouselViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F0CA22CE217DC17B00B22166 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0CA22B3217DC17800B22166 /* YYCarouselView */;
+			targetProxy = F0CA22CD217DC17B00B22166 /* PBXContainerItemProxy */;
+		};
+		F0CA22D9217DC17B00B22166 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0CA22B3217DC17800B22166 /* YYCarouselView */;
+			targetProxy = F0CA22D8217DC17B00B22166 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F0CA22BD217DC17800B22166 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0CA22BE217DC17800B22166 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F0CA22C2217DC17A00B22166 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0CA22C3217DC17A00B22166 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F0CA22DE217DC17B00B22166 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F0CA22DF217DC17B00B22166 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F0CA22E1217DC17B00B22166 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YYCarouselView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mofashy.YYCarouselView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F0CA22E2217DC17B00B22166 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YYCarouselView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mofashy.YYCarouselView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F0CA22E4217DC17B00B22166 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YYCarouselViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mofashy.YYCarouselViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YYCarouselView.app/YYCarouselView";
+			};
+			name = Debug;
+		};
+		F0CA22E5217DC17B00B22166 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YYCarouselViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mofashy.YYCarouselViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YYCarouselView.app/YYCarouselView";
+			};
+			name = Release;
+		};
+		F0CA22E7217DC17B00B22166 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YYCarouselViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mofashy.YYCarouselViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YYCarouselView;
+			};
+			name = Debug;
+		};
+		F0CA22E8217DC17B00B22166 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YYCarouselViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mofashy.YYCarouselViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YYCarouselView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0CA22AF217DC17800B22166 /* Build configuration list for PBXProject "YYCarouselView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0CA22DE217DC17B00B22166 /* Debug */,
+				F0CA22DF217DC17B00B22166 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0CA22E0217DC17B00B22166 /* Build configuration list for PBXNativeTarget "YYCarouselView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0CA22E1217DC17B00B22166 /* Debug */,
+				F0CA22E2217DC17B00B22166 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0CA22E3217DC17B00B22166 /* Build configuration list for PBXNativeTarget "YYCarouselViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0CA22E4217DC17B00B22166 /* Debug */,
+				F0CA22E5217DC17B00B22166 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0CA22E6217DC17B00B22166 /* Build configuration list for PBXNativeTarget "YYCarouselViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0CA22E7217DC17B00B22166 /* Debug */,
+				F0CA22E8217DC17B00B22166 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F0CA22AC217DC17800B22166 /* Project object */;
+}
