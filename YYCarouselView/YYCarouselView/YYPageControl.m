@@ -44,9 +44,11 @@
     if (_type == YYPageControlTypeDot) {
         _itemSize = CGSizeMake(7, 7);
     } else if (_type == YYPageControlTypeDash) {
-        _itemSize = CGSizeMake(10, 5);
-    } else {
+        _itemSize = CGSizeMake(10, 4);
+    } else if (_type == YYPageControlTypeRing) {
         _itemSize = CGSizeMake(7, 7);
+    } else {
+        _itemSize = CGSizeMake(10, 4);
     }
 }
 
@@ -63,7 +65,7 @@
             CGContextFillEllipseInRect(context, (CGRect){{x, y}, _itemSize});
         } else if (_type == YYPageControlTypeDash) {
             CGContextFillRect(context, (CGRect){{x, y}, _itemSize});
-        } else {
+        } else if (_type == YYPageControlTypeRing) {
             CGContextSetLineWidth(context, 2);
             CGContextSetStrokeColorWithColor(context, [i == _currentPage ? _currentPageIndicatorTintColor : _pageIndicatorTintColor CGColor]);
             CGContextAddEllipseInRect(context, (CGRect){{x, y}, _itemSize});
@@ -71,6 +73,12 @@
             
             if (i == _currentPage) {
                 CGContextFillEllipseInRect(context, (CGRect){{x, y}, _itemSize});
+            }
+        } else {
+            if (i == _currentPage) {
+                CGContextFillRect(context, CGRectMake(_insets.left, y, x + _itemSize.width - _insets.left, _itemSize.height));
+            } else if ( i > _currentPage) {
+                CGContextFillRect(context, (CGRect){{x, y}, _itemSize});
             }
         }
     }

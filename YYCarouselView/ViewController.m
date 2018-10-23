@@ -26,7 +26,7 @@
     [self.view addSubview:view];
     _carouselView = view;
     
-    view.pageControl = [[YYPageControl alloc] initWithType:YYPageControlTypeRing];
+    view.pageControl = [[YYPageControl alloc] initWithType:YYPageControlTypeLine];
     
     [view registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"XYZ"];
 }

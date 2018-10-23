@@ -14,6 +14,7 @@ typedef NS_ENUM(NSUInteger, YYPageControlType) {
     YYPageControlTypeDot = 0,
     YYPageControlTypeDash,
     YYPageControlTypeRing,
+    YYPageControlTypeLine,
 };
 
 @interface YYPageControl : UIControl
