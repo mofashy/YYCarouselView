@@ -35,7 +35,10 @@
     BOOL _showing;
 }
 
+#pragma mark - Life cycle
+
 - (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     YYLog(@"%@ dealloc", NSStringFromClass([self class]));
 }
 
@@ -47,10 +50,13 @@
         
         [self setupcollectionViewWithType:type];
         [self setupTimer];
+        [self setupObservers];
     }
     
     return self;
 }
+
+#pragma mark - Public
 
 - (void)registerClass:(Class)cellClass forCellWithReuseIdentifier:(NSString *)identifier {
     [self.collectionView registerClass:cellClass forCellWithReuseIdentifier:identifier];
@@ -58,6 +64,15 @@
 
 - (YYCarouselViewCell *)dequeueReusableCellWithReuseIdentifier:(NSString *)identifier forIndex:(NSInteger)index {
     return (YYCarouselViewCell *)[self.collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];
+}
+
+- (void)reloadData {
+    _numberOfItems = [self.dataSource numberOfItemsInCarouselView:self];
+    [self.collectionView reloadData];
+    
+    _pageControl.numberOfPages = _numberOfItems;
+    CGSize size = [_pageControl sizeForNumberOfPages:_numberOfItems];
+    _pageControl.frame = CGRectMake((self.frame.size.width - size.width) / 2, self.frame.size.height - size.height, size.width, size.height);
 }
 
 - (void)pause {
@@ -72,6 +87,8 @@
         [_timer resumeAfter:_duration];
     }
 }
+
+#pragma mark - Setup
 
 - (void)setupcollectionViewWithType:(YYCarouselViewCellDisplayType)type {
     YYCarouselViewFlowLayout *layout = nil;
@@ -95,6 +112,23 @@
     _timer = [YYWeakTimer timerWithTimeInterval:_duration target:self selector:@selector(keepGoing:) userInfo:nil repeats:YES];
 }
 
+- (void)setupObservers {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willEnterForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
+}
+
+#pragma mark - Notification handler
+
+- (void)didEnterBackground:(NSNotification *)noti {
+    [self pause];
+}
+
+- (void)willEnterForeground:(NSNotification *)noti {
+    [self resume];
+}
+
+#pragma mark - Override
+
 - (void)didMoveToSuperview {
     [super didMoveToSuperview];
     
@@ -109,6 +143,8 @@
     _showing = YES;
 }
 
+#pragma mark - Action
+
 - (void)keepGoing:(NSTimer *)timer {
     if (self.collectionView.contentOffset.x != self.frame.size.width) {
         [self.collectionView setContentOffset:CGPointMake(self.frame.size.width, 0) animated:NO];  // fix content offset if need
@@ -120,6 +156,8 @@
     CGFloat contentOffsetX = self.collectionView.contentOffset.x + self.frame.size.width;
     [self.collectionView setContentOffset:CGPointMake(contentOffsetX, 0) animated:YES];
 }
+
+#pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     NSInteger offset = 0;
@@ -182,6 +220,8 @@
     }
 }
 
+#pragma mark - UICollectionViewDataSource
+
 - (NSInteger)numberOfItemsInSection:(NSInteger)section {
     return 1;
 }
@@ -200,11 +240,15 @@
     return [self.dataSource carouselView:self cellForItemAtIndex:index];
 }
 
+#pragma mark - UICollectionViewDelegate
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if ([self.delegate respondsToSelector:@selector(carouselView:didSelectItemAtIndex:)]) {
         [self.delegate carouselView:self didSelectItemAtIndex:_currentIndex];
     }
 }
+
+#pragma mark - Setter
 
 - (void)setDataSource:(id<YYCarouselViewDataSource>)dataSource {
     _dataSource = dataSource;

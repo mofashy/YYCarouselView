@@ -36,6 +36,7 @@
 
 - (void)setup {
     self.backgroundColor = [UIColor clearColor];
+    self.hidesForSinglePage = YES;
     
     _insets = UIEdgeInsetsMake(10, 10, 10, 10);
     _itemSpacing = 7;

@@ -23,6 +23,7 @@
 		F0CA22FB217DC4ED00B22166 /* YYCarouselViewStackLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA22FA217DC4ED00B22166 /* YYCarouselViewStackLayout.m */; };
 		F0CA22FE217DC64B00B22166 /* YYCarouselViewLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA22FD217DC64B00B22166 /* YYCarouselViewLayoutAttributes.m */; };
 		F0CA2301217DC70100B22166 /* YYWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA2300217DC70100B22166 /* YYWeakTimer.m */; };
+		F0F99E83218167060007B8FF /* YYCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F99E82218167060007B8FF /* YYCarouselViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		F0CA22FD217DC64B00B22166 /* YYCarouselViewLayoutAttributes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCarouselViewLayoutAttributes.m; sourceTree = "<group>"; };
 		F0CA22FF217DC70100B22166 /* YYWeakTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYWeakTimer.h; sourceTree = "<group>"; };
 		F0CA2300217DC70100B22166 /* YYWeakTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYWeakTimer.m; sourceTree = "<group>"; };
+		F0F99E81218167060007B8FF /* YYCarouselViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCarouselViewController.h; sourceTree = "<group>"; };
+		F0F99E82218167060007B8FF /* YYCarouselViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCarouselViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,8 @@
 				F0CA22B8217DC17800B22166 /* AppDelegate.m */,
 				F0CA22BA217DC17800B22166 /* ViewController.h */,
 				F0CA22BB217DC17800B22166 /* ViewController.m */,
+				F0F99E81218167060007B8FF /* YYCarouselViewController.h */,
+				F0F99E82218167060007B8FF /* YYCarouselViewController.m */,
 				F0CA22BD217DC17800B22166 /* Main.storyboard */,
 				F0CA22C0217DC17A00B22166 /* Assets.xcassets */,
 				F0CA22C2217DC17A00B22166 /* LaunchScreen.storyboard */,
@@ -315,6 +320,7 @@
 				F0CA22F2217DC24900B22166 /* YYPageControl.m in Sources */,
 				F0CA22FB217DC4ED00B22166 /* YYCarouselViewStackLayout.m in Sources */,
 				F0CA22F5217DC2AA00B22166 /* YYCarouselViewFlowLayout.m in Sources */,
+				F0F99E83218167060007B8FF /* YYCarouselViewController.m in Sources */,
 				F0CA22F8217DC4DC00B22166 /* YYCarouselViewTileLayout.m in Sources */,
 				F0CA22FE217DC64B00B22166 /* YYCarouselViewLayoutAttributes.m in Sources */,
 				F0CA22EC217DC1B100B22166 /* YYCarouselView.m in Sources */,

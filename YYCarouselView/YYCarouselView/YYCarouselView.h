@@ -33,6 +33,8 @@ typedef NS_ENUM(NSUInteger, YYCarouselViewCellDisplayType) {
 - (void)registerClass:(nullable Class)cellClass forCellWithReuseIdentifier:(NSString *)identifier;
 - (YYCarouselViewCell *)dequeueReusableCellWithReuseIdentifier:(NSString *)identifier forIndex:(NSInteger)index;
 
+- (void)reloadData;
+
 - (void)pause;
 - (void)resume;
 @end

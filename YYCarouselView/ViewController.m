@@ -7,11 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "YYCarouselView.h"
+#import "YYCarouselViewController.h"
 
-@interface ViewController () <YYCarouselViewDataSource, YYCarouselViewDelegate>
-@property (strong, nonatomic) YYCarouselView *carouselView;
-
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@property (strong, nonatomic) NSArray *types;
 @end
 
 @implementation ViewController
@@ -20,49 +19,33 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    YYCarouselView *view = [[YYCarouselView alloc] initWithFrame:CGRectMake(20, 100, CGRectGetWidth(self.view.frame) - 40, (CGRectGetWidth(self.view.frame) - 40) * 9 / 16) type:YYCarouselViewCellDisplayTypeStack];
-    view.dataSource = self;
-    view.delegate = self;
-    [self.view addSubview:view];
-    _carouselView = view;
-    
-    view.pageControl = [[YYPageControl alloc] initWithType:YYPageControlTypeLine];
-    
-    [view registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"XYZ"];
+    _types = @[@"Delegate+Stack+Dot",
+               @"Delegate+Tile+Ring"];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [_carouselView pause];
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _types.count;
 }
 
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [_carouselView resume];
-}
-
-- (NSInteger)numberOfItemsInCarouselView:(YYCarouselView *)carouselView {
-    return 3;
-}
-
-- (YYCarouselViewCell *)carouselView:(YYCarouselView *)carouselView cellForItemAtIndex:(NSInteger)index {
-    YYCarouselViewCell *cell = [carouselView dequeueReusableCellWithReuseIdentifier:@"XYZ" forIndex:index];
-    
-    cell.contentView.backgroundColor = @[[UIColor redColor], [UIColor greenColor], [UIColor blueColor]][index % 3];
-    [[cell.contentView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    UILabel *label = [[UILabel alloc] init];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.frame = cell.bounds;
-    label.text = [NSString stringWithFormat:@"%ld", index];
-    [cell.contentView addSubview:label];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ViewControllerTableCell"];
+    cell.textLabel.text = _types[indexPath.row];
     
     return cell;
 }
 
-- (void)carouselView:(YYCarouselView *)carouselView didSelectItemAtIndex:(NSInteger)index {
-    NSLog(@"select %ld", index);
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    YYCarouselViewController *vc = [[YYCarouselViewController alloc] init];
+    if (indexPath.row == 0) {
+        vc.type = YYCarouselViewCellDisplayTypeStack;
+        vc.pageControlType = YYPageControlTypeDot;
+    } else {
+        vc.type = YYCarouselViewCellDisplayTypeTile;
+        vc.pageControlType = YYPageControlTypeRing;
+    }
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
